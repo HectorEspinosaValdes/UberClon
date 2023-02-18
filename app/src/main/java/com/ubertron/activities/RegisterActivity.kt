@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager
 import android.widget.Toast
-import com.ubertron.MainActivity
 import com.ubertron.databinding.ActivityRegisterBinding
 import com.ubertron.provider.AuthProvider
 

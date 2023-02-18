@@ -1,11 +1,10 @@
-package com.ubertron
+package com.ubertron.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import android.widget.Toast
-import com.ubertron.activities.RegisterActivity
 import com.ubertron.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
