@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activities.RegisterActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -29,8 +29,8 @@
         android:layout_height="match_parent"
         android:layout_marginRight="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="110dp"
-        android:layout_marginBottom="110dp">
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp">
 
         <View
             android:layout_width="match_parent"
@@ -47,16 +47,73 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:src="@drawable/ic_person_white"
-                android:layout_marginTop="30dp"/>
+                android:layout_marginTop="10dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="LOGIN"
+                android:text="REGISTRO"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textAlignment="center"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                app:startIconDrawable="@drawable/ic_little_person"
+                app:startIconTint="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textFieldName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre"
+                    android:inputType="text"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                app:startIconDrawable="@drawable/ic_person_outline"
+                app:startIconTint="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textFieldApellido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Apellido"
+                    android:inputType="textEmailAddress"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                app:startIconDrawable="@drawable/ic_baseline_phone_24"
+                app:startIconTint="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textFieldPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Telefono"
+                    android:inputType="phone"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -95,15 +152,34 @@
                     android:textColor="@color/white"/>
             </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                app:startIconDrawable="@drawable/ic_lock_white"
+                app:startIconTint="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textFieldConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Confirmar contraseña"
+                    android:inputType="textPassword"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
             <Button
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="30dp"
                 android:layout_marginLeft="30dp"
-                android:text="INICIAR SESION"
+                android:text="REGISTRATE"
                 android:layout_marginTop="30dp"
-                android:background="@drawable/runded_buton"/>
+                android:background="@drawable/runded_buton"
+                android:backgroundTint="@color/white"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -120,7 +196,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¿No tienes una cuenta?"
+                    android:text="¿Ya tienes cuenta?"
                     android:textColor="@color/white"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"/>
@@ -133,15 +209,14 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btnRegister"
+                android:id="@+id/btnGoToLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="30dp"
                 android:layout_marginLeft="30dp"
-                android:text="REGISTRARSE"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/runded_buton"
-                android:backgroundTint="@color/white"/>
+                android:text="INICIAR SESION"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/runded_buton"/>
 
         </LinearLayout>
     </FrameLayout>

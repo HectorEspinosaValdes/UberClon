@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "790484845894",
+    "project_id": "ubertron-145b3",
+    "storage_bucket": "ubertron-145b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790484845894:android:2daa5ab7f79975c6951147",
+        "android_client_info": {
+          "package_name": "com.ubertron"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "790484845894-d18dhiuvdedtk407v8877a3jig89lk5h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAL_vBZkyW5Xem2MEnFAC63GhM3Xcy16Qc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "790484845894-d18dhiuvdedtk407v8877a3jig89lk5h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
