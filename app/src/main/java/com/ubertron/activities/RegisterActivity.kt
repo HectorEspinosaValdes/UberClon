@@ -7,12 +7,15 @@ import android.util.Log
 import android.view.WindowManager
 import android.widget.Toast
 import com.ubertron.databinding.ActivityRegisterBinding
+import com.ubertron.models.Client
 import com.ubertron.provider.AuthProvider
+import com.ubertron.provider.ClientProvider
 
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterBinding
     private val authProvider = AuthProvider()
+    private val clientProvider = ClientProvider()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +41,20 @@ class RegisterActivity : AppCompatActivity() {
 
             authProvider.register(email, password).addOnCompleteListener{
                 if (it.isSuccessful){
-                    Toast.makeText(this@RegisterActivity, "Registro exitoso", Toast.LENGTH_LONG).show()
+                    val client = Client(
+                        id = authProvider.getId(),
+                        name = name,
+                        lastname = lastName,
+                        phone = phone,
+                        email = email)
+
+                    clientProvider.create(client).addOnCompleteListener(){
+                        if (it.isSuccessful){
+                            Toast.makeText(this@RegisterActivity, "Registro exitoso", Toast.LENGTH_SHORT).show()
+                        }else{
+                            Toast.makeText(this@RegisterActivity, "Hubo un error almacenando los datos ${it.exception.toString()}", Toast.LENGTH_SHORT).show()
+                        }
+                    }
                 }
                 else{
                     Toast.makeText(this@RegisterActivity, "Registro fallido ${it.exception.toString()}", Toast.LENGTH_SHORT).show()
